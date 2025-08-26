@@ -13,7 +13,7 @@ class TestExample(BaseCase):
         
         status_code = self.get_link_status_code(opened_url)
 
-        assert opened_url == opened_url, f"Opened URL: {opened_url}\nCaptured URL: {current_url}\nStatus: {status_code}"
+        assert opened_url == current_url, f"Opened URL: {opened_url}\nCaptured URL: {current_url}\nStatus: {status_code}"
         
         assert status_code == 200, f"Expected status code 200, but got {status_code}"
         
